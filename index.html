@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Apple Catch!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<!--Блок игрового поля-->
+	<div id="play-ground">
+
+		<!--Стартовый блок - 800x600px-->
+		<div id="start-block">
+			<div id="name">
+				<h1 id="game-name">APPLE CATCH!</h1>
+			</div>
+				<button id="start-button">START GAME</button>
+			<div id="hedgehog"><img src="img/start-block-ezhik.png"></div>
+			<div id="hint">
+				<div class="nav">
+	            	<p><img src="img/left.png" alt=""  /></p>
+	            	<p class="string">move left</p>
+	        	</div>
+	       		<div class="nav">
+	            	<p><img src="img/right.png"  alt="" /></p>
+	           		 <p class="string">move right</p>
+	        	</div>	
+	    	</div>
+		</div>
+
+		<!--Блок игровой зоны ёжика 600x600px-->
+		<div id="game-area"></div>
+
+	</div>
+
+<script type="text/javascript" src="js/variables.js"></script>
+<script type="text/javascript" src="js/events.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

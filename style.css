@@ -1,0 +1,394 @@
+html { 
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	/*background-image: url(img/blur.jpg);
+	background-repeat: no-repeat;
+	background-position: center 0;*/
+}
+
+#play-ground {
+	width: 800px;
+	height: 600px;
+	background-image: url(img/game-bg.png);
+	border: 8px solid white;
+	border-radius: 14px;
+	margin: 10px auto;
+	position: relative;
+}
+
+/*==================================
+Стартовый блок
+===================================*/
+
+/* Размеры, картинка, положение начальной страницы */
+#start-block { 
+	width: 800px;
+	height: 600px;
+	background-image: url(img/game-bg.png);
+	position: absolute;
+ }
+
+/* Стили блока названия игры*/
+ #name {
+ 	top: 10px;
+ 	width: 100%;
+	height: 160px;
+ }
+
+/* Стили надписи названия игры */
+#name h1 {
+	left: 100px;
+	color: #E73108;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+	font-size: 80px;
+	font-weight: bold;
+	height: calc(100% - 36px);
+	display: block;
+	text-align: center;
+	text-shadow: 5px 5px #711212;
+	
+}
+
+/* Стили кнопки старта игры */
+ #start-block button {
+	top: 0px;
+	left: 360px;
+	position: relative;
+ 	display: block;
+ 	border-radius: 14px;
+ 	border: 6px solid #0DCEF6;
+ 	color: #D9E708;
+ 	text-shadow: 2px 2px #097C0C;
+ 	background: #F6F929;
+ 	padding: 20px 20px;
+ 	font-size: 50px;
+ 	font-family: Comic Sans, Comic Sans MS, cursive;
+ 	font-weight: bold;
+ 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ 	transition-duration: 0.4s;
+ 	animation: glowing 1300ms infinite;
+ } 
+
+/* Анимация-сияние кнопки старта игры */
+ 	@keyframes glowing {
+      0% { background-color: #BBEBF5; box-shadow: 0 0 5px #BBEBF5; }
+      60% { background-color: #1ECEF1; box-shadow: 0 0 20px #1ECEF1; }
+      100% { background-color: #BBEBF5; box-shadow: 0 0 5px #BBEBF5; }
+      }
+     
+/* Смена цвета надписи на кнопке старта игры при наведении на неё*/
+#start-block button:hover {
+  background-color: #4FDF1F; 
+  color: #109E14;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Стили блока правил игры */
+#hint {
+	top: 350px;
+	left: 300px;
+ 	width: 60%;
+	height: 70px;
+	position: absolute;	
+	display: inline-block;
+	
+}
+
+/* Стили изображений "влево/вправо" */
+.nav {
+	display: inline-block; /*Задаем блочно-строчное отображение*/
+  	width: 60px; /*задаем ширину блока*/
+  	height: 70px;
+  	left: 160px;
+  	position: relative;
+  	animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+        }
+
+/* Анимация - плавающий эффект */
+    @keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+ 		
+/* Стили надписей под значками "влево/вправо" */
+.string {
+	text-align: center; /*Равняем текст по-горизонтали*/
+    font-size: 24px;
+ 	font-family: Comic Sans, Comic Sans MS, cursive;
+ 	font-weight: bold;
+ 	color: #E73108;
+ 	text-shadow: 1px 1px #711212;
+}
+
+/* Размер значков "влево/вправо" */
+.nav img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Стили изображения декоративного "ёжика" на стартовом блоке */
+#hedgehog {
+	top: -120px;
+	left: 30px;
+	width: 340px;
+	height: 340px;
+	position: relative;	
+	animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+/* Анимация движения ёжика */
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+#hedgehog img {
+	width: 100%;
+	height: 100%;	
+}
+
+/*=================================
+ info-block
+==================================*/
+
+#info-block {
+	width: 200px;
+	height: 600px;
+	float: left;
+}
+
+#clock {
+	position: relative;
+	top: 120px;
+	left: 20px;	
+}
+
+#clock span {
+	font-size: 40px;
+	color: #E73108;
+	text-shadow: 2px 2px #711212;
+	font-weight: bold;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+	position: absolute;	
+	margin-left: 8px;
+}
+
+#clock img {
+	height: 60px;	
+	vertical-align: middle;
+}
+
+#points-block {
+	
+	position: absolute;
+	top: 200px;
+	left: 20px;	
+}
+
+#points-block img {
+	height: 50px;	
+	vertical-align: middle;
+}
+
+#points-block span {
+	font-size: 53px;
+	color: #109E14;
+	text-shadow: 2px 2px #097C0C;
+	font-weight: bold;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+	margin-left: 8px;
+	vertical-align: middle;
+}
+
+#lifes {
+	position: absolute;
+	top: 300px;
+	left: 20px;		
+}
+
+#lifes span {
+	width: 50px;
+	height: 50px;
+	display: block;
+	float: left;
+}
+#lifes span img {
+	width: 100%;
+	height: 100%;	
+}
+
+/*==================================
+ game-area
+==================================*/
+
+#game-area {
+	width: 600px;
+	height: 600px;
+	float: right;
+}
+
+#tree {
+	top: 23px;
+    left: 230px;
+	position: absolute;
+}
+
+#ezhik {
+	top: 466px;
+    left: 400px;
+	position: absolute;
+	/*transition: all 50ms;*/
+}
+
+#apple {
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	transition: all 1ms;
+}
+
+#aid {
+	width: 38px;
+	height: 38px;
+	background-image: url(img/aid.png);
+	left: 621px;
+	top: 273px;
+	position: absolute;
+	transition: all 1s;
+}
+
+.brach1 {
+	left: 330px;
+	top: 266px;
+}
+
+.brach2 {
+	left: 280px;
+	top: 157px;
+}
+
+.brach3 {
+	left: 384px;
+	top: 67px;
+}
+
+.brach4 {
+	left: 477px;
+	top: 186px;
+}
+
+.brach5 {
+	left: 570px;
+	top: 89px;
+}
+
+.brach6 {
+	left: 644px;
+	top: 118px;
+}
+
+.brach7 {
+	left: 715px;
+	top: 240px;
+}
+
+ /*=================================
+ Блок завершения игры
+ ==================================*/
+ 
+ /* Стили блока завершения игры */
+ #final-block {
+ 	width: 800px;
+	height: 600px;
+	background: #ECF53C;
+	background-image: url(img/game-bg.png);
+	position: absolute;
+	display: block;
+ }
+
+ /* Стили блока результатов игры */
+ #game-results {
+	top: 40px;
+ 	width: 100%;
+	height: 160px;
+ }
+
+ /* Стили теста в блоке результатов игры */
+#game-results h2, h3 {
+ 	left: 100px;
+	color: #E73108;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+	font-size: 50px;
+	font-weight: bold;
+	height: calc(100% - 100px);
+	display: block;
+	text-align: center;
+	text-shadow: 3px 3px #711212;
+	animation-duration: 2s;
+  	animation-name: bounceIn;
+}
+
+/* Анимация-выскакивание текста результатов игры */
+ 	@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Стили кнопки рестарта игры */
+ #restart-button {
+ 	top: 100px;
+	left: 240px;
+	position: relative;
+ 	display: block;
+ 	border-radius: 14px;
+ 	border: 6px solid #0DCEF6;
+ 	color: #D9E708;
+ 	text-shadow: 2px 2px #097C0C;
+ 	background: #F6F929;
+ 	padding: 30px 30px;
+ 	font-size: 50px;
+ 	font-family: Comic Sans, Comic Sans MS, cursive;
+ 	font-weight: bold;
+ 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ 	transition-duration: 0.4s;
+ 	animation: glowing 1300ms infinite;
+ } 
+
+/* Анимация-сияние кнопки рестарта игры */
+ 	@keyframes glowing {
+      0% { background-color: #BBEBF5; box-shadow: 0 0 5px #BBEBF5; }
+      60% { background-color: #1ECEF1; box-shadow: 0 0 20px #1ECEF1; }
+      100% { background-color: #BBEBF5; box-shadow: 0 0 5px #BBEBF5; }
+      }
+
+/* Смена цвета надписи на кнопке рестарта игры при наведении на неё*/
+#final-block button:hover {
+  background-color: #4FDF1F; 
+  color: #109E14;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
